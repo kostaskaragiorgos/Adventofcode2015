@@ -11,14 +11,18 @@ def vows(stragg):
 
 def contfor(stragg):
     forbs = ['ab', 'cd', 'pq', 'xy']
-    if forbs in stragg:
+    containsfor = any(forb in stragg for forb in forbs)
+    if  containsfor:
         return False
     return True
+
+
 
 with open("day5.txt") as f:
     lines = f.read().split("\n")
     for i in lines:
         print(vows(i))
+        print(contfor(i))
 
 
 
