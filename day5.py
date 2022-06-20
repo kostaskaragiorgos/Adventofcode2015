@@ -17,12 +17,21 @@ def contfor(stragg):
     return True
 
 
+def twiceinarow(stragg):
+    for i in range(len(stragg)-1 ):
+        if stragg[i] == stragg[i+1]:
+            return True
+    return False
 
+
+nicewordscounter = 0
 with open("day5.txt") as f:
     lines = f.read().split("\n")
     for i in lines:
-        print(vows(i))
-        print(contfor(i))
+        if vows(i) and contfor(i) and twiceinarow(i):
+            nicewordscounter +=1
+
+print(nicewordscounter)
 
 
 
