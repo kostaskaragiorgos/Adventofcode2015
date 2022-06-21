@@ -8,6 +8,14 @@ def turnon(arr, ax, ay, bx, by):
             arr[i][j] = 1
     return arr
 
+def toggle(arr, ax, ay, bx, by):
+    for i in range(ax, bx+1):
+        for j in range(ay, by+1):
+            if arr[i][j] == 1:
+                arr[i][j] = 0
+            else:
+                arr[i][j] = 1;
+    return arr
 
 def turnoff(arr, ax, ay, bx, by):
     for i in range(ax, bx+1):
