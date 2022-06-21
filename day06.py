@@ -33,5 +33,11 @@ with open("day06.txt") as f:
     print(lines)
     for i in action:
         for j in lines:
-            if action == 'turn on':
-                turnon(arr, j[0], j[1],j[2],j[3])
+            if i == 'turn on':
+                turnon(arr, int(j[0]), int(j[1]), int(j[2]), int(j[3]))
+            elif i == 'turn off':
+                turnoff(arr, int(j[0]), int(j[1]), int(j[2]), int(j[3]))
+            else:
+                toggle(arr, int(j[0]), int(j[1]), int(j[2]), int(j[3]))
+
+print(np.count_nonzero(arr==1))
