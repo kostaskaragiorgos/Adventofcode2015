@@ -6,7 +6,13 @@ def turnon(arr, ax, ay, bx, by):
         for j in range(ay, by+1):
             arr[i][j] = 1
     return arr
-    
+
+
+def turnoff(arr, ax, ay, bx, by):
+    for i in range(ax, bx+1):
+        for j in range(ay, by+1):
+            arr[i][j] = 0
+    return arr
 
 with open("day06.txt") as f:
     lines = f.read()
